@@ -186,7 +186,7 @@ class ImageCrop extends Component {
   }
   render() {
     return (
-        <View {...this._panResponder.panHandlers}>
+        <View {...this._panResponder.panHandlers} style={{height:this.props.cropHeight, width:this.props.cropWidth, alignSelf:"center"}}>
           <Surface width={this.props.cropWidth} height={this.props.cropHeight} pixelRatio={this.props.pixelRatio} backgroundColor="transparent" ref="cropit">
 		        <GLImage
 		          source={{ uri: this.props.image}}
